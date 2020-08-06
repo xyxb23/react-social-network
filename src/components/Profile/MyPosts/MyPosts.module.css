@@ -1,0 +1,20 @@
+.addPost {
+    margin-left: 3%;
+}
+
+.addPost textarea {
+    display: flex;
+    min-width: 90%;
+    min-height: 10em;
+    resize: none;
+    padding-bottom: 0;
+}
+
+.addPost button {
+    font-family: "Titillium Web", "Roboto", sans-serif;
+}
+
+.posts {
+    margin-top: 10px;
+    padding: 10px 25px;
+}

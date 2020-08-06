@@ -1,0 +1,19 @@
+.item {
+  margin: 10px 5px;
+}
+
+.item img {
+  width: 40px;
+}
+
+.message {
+  padding: 5px 10px;
+}
+
+.likeButton {
+  background-color: cornflowerblue;
+  color: white;
+  border-radius: 3px;
+  border: none;
+  min-height: 1.8em;
+}
