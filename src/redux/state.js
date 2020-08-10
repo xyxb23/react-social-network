@@ -23,26 +23,26 @@ let state = {
       {
         id: 1,
         message: "Hi",
-        authorName: "",
-        authorAvatar: ""
+        authorName: "Rashid",
+        authorAvatar: "https://www.svgrepo.com/show/65453/avatar.svg"
       },
       {
         id: 2,
         message: "How are you?",
-        authorName: "",
-        authorAvatar: ""
+        authorName: "Rashid",
+        authorAvatar: "https://www.svgrepo.com/show/65453/avatar.svg"
       },
       {
         id: 3,
         message: "I'm fine, thanks",
-        authorName: "",
-        authorAvatar: ""
+        authorName: "Name2",
+        authorAvatar: "https://www.svgrepo.com/show/137325/avatar.svg"
       },
       {
         id: 4,
         message: "See you later",
-        authorName: "",
-        authorAvatar: ""
+        authorName: "Rashid",
+        authorAvatar: "https://www.svgrepo.com/show/65453/avatar.svg"
       }
     ],
     dialogsData: [
