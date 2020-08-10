@@ -40,27 +40,33 @@ let state = {
     dialogsData: [
       {
         id: 1,
-        name: "Name1"
+        name: "Name1",
+        avatar: "https://www.svgrepo.com/show/95333/avatar.svg"
       },
       {
         id: 2,
-        name: "Name2"
+        name: "Name2",
+        avatar: "https://www.svgrepo.com/show/137325/avatar.svg"
       },
       {
         id: 3,
-        name: "Rashid"
+        name: "Rashid",
+        avatar: "https://www.svgrepo.com/show/65453/avatar.svg"
       },
       {
         id: 4,
-        name: "Noname"
+        name: "Noname",
+        avatar: "https://www.svgrepo.com/show/9695/avatar.svg"
       },
       {
         id: 5,
-        name: "Name 5"
+        name: "Name 5",
+        avatar: "https://www.svgrepo.com/show/17344/avatar.svg"
       },
       {
         id: 6,
-        name: "Name6"
+        name: "Name6",
+        avatar: "https://www.svgrepo.com/show/157054/avatar.svg"
       }
     ]
   },

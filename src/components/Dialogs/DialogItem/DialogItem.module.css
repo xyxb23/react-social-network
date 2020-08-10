@@ -1,5 +1,17 @@
 .dialog {
-    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgray;
+    padding: 5px;
+}
+
+.dialog img {
+    max-width: 50px;
+}
+
+.dialog a {
+    margin: 0 auto;
 }
 
 .active {
