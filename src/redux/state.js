@@ -22,19 +22,27 @@ let state = {
     messagesData: [
       {
         id: 1,
-        message: "Hi"
+        message: "Hi",
+        authorName: "",
+        authorAvatar: ""
       },
       {
         id: 2,
-        message: "How are you?"
+        message: "How are you?",
+        authorName: "",
+        authorAvatar: ""
       },
       {
         id: 3,
-        message: "I'm fine, thanks"
+        message: "I'm fine, thanks",
+        authorName: "",
+        authorAvatar: ""
       },
       {
         id: 4,
-        message: "See you later"
+        message: "See you later",
+        authorName: "",
+        authorAvatar: ""
       }
     ],
     dialogsData: [
