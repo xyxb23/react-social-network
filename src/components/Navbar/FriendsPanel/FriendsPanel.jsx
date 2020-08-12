@@ -3,7 +3,7 @@ import classes from './FriendsPanel.module.css';
 
 const FriendsPanel = (props) => {
   let friends = props.friends.map((friend) => {
-    return <div className={classes.friend}><img src={friend.avatar} alt={friend.name}/></div>;
+    return <div className={classes.friend} key={friend.id}><img src={friend.avatar} alt={friend.name}/></div>;
   });
 
   return (
