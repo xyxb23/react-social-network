@@ -13,7 +13,22 @@
 }
 
 .messages {
-    padding: 10px;
-    padding-left: 20px;
+    padding: 20px;
     border-left: 1px solid lightgray;
+}
+
+#addMessage {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 60px;
+    width: 90%;
+}
+
+#addMessage textarea {
+    height: 100px;
+}
+
+#addMessage button {
+    width: 100px;
 }
