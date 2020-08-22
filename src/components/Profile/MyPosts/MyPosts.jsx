@@ -1,14 +1,15 @@
 import React from 'react';
 import classes from "./MyPosts.module.css";
-import Post from "./Post/Post"
+import Post from "./Post/Post";
 
 const MyPosts = (props) => {
-  let posts = props.posts.map(post => <Post message={post.message} likes={post.likesCount}/>);
+  let posts = props.posts.map(post => <Post message={post.message} likes={post.likesCount} key={post.id}/>);
 
   let newPostElement = React.createRef();
 
   let addPost = () => {
-    alert(newPostElement.current.value);
+    let text = newPostElement.current.value;
+    props.addPost(text);
   }
 
   return (
