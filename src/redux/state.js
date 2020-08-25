@@ -115,34 +115,42 @@ let store = {
   subscribe(observer) {
     this._callSubscriber = observer;
   },
-  addPost() {
-    let newPost = {
-      id: 4,
-      message: this._state.profilePage.newPostText,
-      likesCount: 0
-    };
-    this._state.profilePage.postsData.push(newPost);
-    this._state.profilePage.newPostText = "";
-    this._callSubscriber();
-  },
-  updateNewPostText(newText) {
-    this._state.profilePage.newPostText = newText;
-    this._callSubscriber();
-  },
-  addMessage() {
-    let newMessage = {
-      id: 5,
-      message: this._state.dialogsPage.newMessageText,
-      authorName: "Some One",
-      authorAvatar: "https://www.svgrepo.com/show/65453/avatar.svg"
-    };
-    this._state.dialogsPage.messagesData.push(newMessage);
-    this._state.dialogsPage.newMessageText = "";
-    this._callSubscriber();
-  },
-  updateNewMessageText(newText) {
-    this._state.dialogsPage.newMessageText = newText;
-    this._callSubscriber();
+  dispatch(action) {
+    switch (action.type) {
+      case 'ADD_POST': {
+        let newPost = {
+          id: 4,
+          message: this._state.profilePage.newPostText,
+          likesCount: 0
+        };
+        this._state.profilePage.postsData.push(newPost);
+        this._state.profilePage.newPostText = "";
+        this._callSubscriber();
+      }
+        break;
+      case 'ADD_MESSAGE': {
+        let newMessage = {
+          id: 5,
+          message: this._state.dialogsPage.newMessageText,
+          authorName: "Some One",
+          authorAvatar: "https://www.svgrepo.com/show/65453/avatar.svg"
+        };
+        this._state.dialogsPage.messagesData.push(newMessage);
+        this._state.dialogsPage.newMessageText = "";
+        this._callSubscriber();
+      }
+        break;
+      case 'UPDATE_NEW_POST_TEXT':
+        this._state.profilePage.newPostText = action.newText;
+        this._callSubscriber();
+        break;
+      case 'UPDATE_NEW_MESSAGE_TEXT':
+        this._state.dialogsPage.newMessageText = action.newText;
+        this._callSubscriber();
+        break;
+      default:
+        return null;
+    }
   }
 };
 export default store;
