@@ -4,6 +4,7 @@ import {NavLink} from 'react-router-dom';
 import FriendsPanel from './FriendsPanel/FriendsPanel';
 
 const Navbar = (props) => {
+    let state = props.store.getState();
     return (
         <nav className={classes.nav}>
             <ul>
@@ -13,7 +14,7 @@ const Navbar = (props) => {
                 <li className={classes.item}><NavLink to="/music" activeClassName={classes.active}>Music</NavLink></li>
                 <li className={classes.item}><NavLink to="/settings" activeClassName={classes.active}>Settings</NavLink></li>
             </ul>
-            <FriendsPanel friends={props.state.friends}/>
+            <FriendsPanel friends={state.sidebar.friends}/>
         </nav>);
 }
 
