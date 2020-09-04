@@ -1,7 +1,11 @@
 import React from 'react';
 import classes from "./MyPosts.module.css";
+import Post from "./Post/Post";
 
 const MyPosts = (props) => {
+  let posts = props.profilePage.postsData.map(post => <Post message={post.message} likes={post.likesCount} key={post.id}/>);
+  let newPostText = props.profilePage.newPostText;
+
   let addPost = () => {
     props.addPost();
   };
@@ -14,11 +18,11 @@ const MyPosts = (props) => {
   return (
     <div>
       <div className={classes.addPost}>
-        <textarea onChange={onPostChange} value={props.newPostText}/>
+        <textarea onChange={onPostChange} value={newPostText}/>
         <button onClick={addPost}>Add post</button>
       </div>
       <div className={classes.posts}>
-        {props.posts}
+        {posts}
       </div>
     </div>
   );
