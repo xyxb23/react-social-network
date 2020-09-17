@@ -73,17 +73,18 @@ const dialogsReducer = (state = initialState, action) => {
         authorName: "Some One",
         authorAvatar: "https://www.svgrepo.com/show/65453/avatar.svg"
       };
-      let newState = {...state};
-      newState.messagesData = [...state.messagesData];
-      newState.messagesData.push(newMessage);
-      newState.newMessageText = "";
-      return newState;
+      return {
+        ...state,
+        newMessageText: "",
+        messagesData: [...state.messagesData, newMessage]
+      };
     }
     case
     UPDATE_NEW_MESSAGE_TEXT:
-      let newState = {...state};
-      newState.newMessageText = action.newText;
-      return newState;
+      return {
+        ...state,
+        newMessageText: action.newText
+      };
     default:
       return state;
   }
